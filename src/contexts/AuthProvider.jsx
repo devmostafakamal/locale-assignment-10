@@ -10,6 +10,7 @@ import { auth } from "../firebase.init";
 function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [activeData, setActiveData] = useState([]);
   const createUser = (email, password) => {
     // setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -33,6 +34,8 @@ function AuthProvider({ children }) {
     user,
     setUser,
     loading,
+    activeData,
+    setActiveData,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 }

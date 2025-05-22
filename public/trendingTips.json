@@ -1,0 +1,58 @@
+[
+  {
+    "_id": 1,
+    "title": "Watering in the Morning",
+    "content": "Always water your plants in the morning to prevent fungal growth.",
+    "views": 1250,
+    "category": "Watering"
+  },
+  {
+    "_id": 2,
+    "title": "Compost Tea Benefits",
+    "content": "Compost tea boosts plant immunity and improves soil health.",
+    "views": 980,
+    "category": "Fertilizing"
+  },
+  {
+    "_id": 3,
+    "title": "Pruning Techniques",
+    "content": "Proper pruning encourages growth and improves plant shape.",
+    "views": 870,
+    "category": "Maintenance"
+  },
+  {
+    "_id": 4,
+    "title": "Natural Pest Control",
+    "content": "Use companion planting to naturally deter pests.",
+    "views": 1100,
+    "category": "Pest Control"
+  },
+  {
+    "_id": 5,
+    "title": "Soil pH Testing",
+    "content": "Regular soil testing helps maintain optimal growing conditions.",
+    "views": 750,
+    "category": "Soil Health"
+  },
+  {
+    "_id": 6,
+    "title": "Winterizing Your Garden",
+    "content": "Prepare your garden for winter with these simple steps.",
+    "views": 920,
+    "category": "Seasonal Care"
+  },
+  {
+    "_id": 7,
+    "title": "Seed Starting Tips",
+    "content": "Get a head start on your garden with indoor seed starting.",
+    "views": 680,
+    "category": "Propagation"
+  },
+  {
+    "_id": 8,
+    "title": "Mulching Benefits",
+    "content": "Mulch conserves water and suppresses weeds.",
+    "views": 820,
+    "category": "Soil Health"
+  }
+]

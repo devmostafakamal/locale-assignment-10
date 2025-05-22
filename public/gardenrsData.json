@@ -1,0 +1,72 @@
+[
+  {
+    "_id": 1,
+    "title": "Tomato Growing Secrets",
+    "content": "Plant tomatoes deeper than they come in the pot - roots will form along the buried stem for stronger plants.",
+    "category": "Vegetables",
+    "likes": 142,
+    "author": "Emma Greenfield",
+    "isTrending": true,
+    "image": "tomato-tip.jpg"
+  },
+  {
+    "_id": 2,
+    "title": "Natural Pest Control",
+    "content": "Mix 1 tbsp dish soap + 1 quart water to spray on aphids. Reapply after rain.",
+    "category": "Pest Management",
+    "likes": 98,
+    "author": "Carlos Rivera",
+    "isTrending": true,
+    "image": "pest-control.jpg"
+  },
+  {
+    "_id": 3,
+    "title": "Compost Accelerator",
+    "content": "Add coffee grounds to your compost pile - they're rich in nitrogen and help break down materials faster.",
+    "category": "Composting",
+    "likes": 87,
+    "author": "Priya Patel",
+    "isTrending": true,
+    "image": "compost-tip.jpg"
+  },
+  {
+    "_id": 4,
+    "title": "Watering Wisdom",
+    "content": "Water plants in the early morning to reduce evaporation and prevent fungal diseases.",
+    "category": "Watering",
+    "likes": 76,
+    "author": "James Wilson",
+    "isTrending": true,
+    "image": "watering-tip.jpg"
+  },
+  {
+    "_id": 5,
+    "title": "Small Space Herbs",
+    "content": "Grow basil, mint, and thyme in hanging baskets to save space and deter ground pests.",
+    "category": "Urban Gardening",
+    "likes": 65,
+    "author": "Aisha Johnson",
+    "isTrending": true,
+    "image": "herbs-tip.jpg"
+  },
+  {
+    "_id": 6,
+    "title": "Flower Pruning Trick",
+    "content": "Deadhead spent blooms weekly to encourage more flowers throughout the season.",
+    "category": "Flowers",
+    "likes": 54,
+    "author": "Thomas Lee",
+    "isTrending": true,
+    "image": "pruning-tip.jpg"
+  },
+  {
+    "_id": 7,
+    "title": "Seed Saving Basics",
+    "content": "Let heirloom plants go to seed, then store in paper envelopes labeled with date/variety.",
+    "category": "Seeds",
+    "likes": 43,
+    "author": "Sophia Chen",
+    "isTrending": false,
+    "image": "seeds-tip.jpg"
+  }
+]
