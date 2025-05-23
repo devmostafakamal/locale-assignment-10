@@ -149,13 +149,13 @@ function Home() {
     .then((data) => console.log(data));
 
   useEffect(() => {
-    fetch("http://localhost:3000/activeGardener")
+    fetch("http://localhost:3000/featured-gardeners")
       .then((res) => res.json())
       .then((data) => setActiveData(data))
       .catch((error) => {
         console.log(error);
       });
-  }, [setActiveData]);
+  }, []);
   return (
     <div>
       {/* <AdminImportPage></AdminImportPage> */}
