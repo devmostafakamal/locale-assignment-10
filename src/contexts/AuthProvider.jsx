@@ -11,6 +11,11 @@ function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
   const [activeData, setActiveData] = useState([]);
+  const [darkTheme, setDarkTheme] = useState(false);
+
+  const toggleTheme = () => {
+    setDarkTheme((prevTheme) => !prevTheme);
+  };
   const createUser = (email, password) => {
     // setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
@@ -36,6 +41,8 @@ function AuthProvider({ children }) {
     loading,
     activeData,
     setActiveData,
+    toggleTheme,
+    darkTheme,
   };
   return <AuthContext value={userInfo}>{children}</AuthContext>;
 }

@@ -5,7 +5,18 @@ import { FaEye } from "react-icons/fa";
 const BrowseTips = () => {
   const [tips, setTips] = useState([]);
   const [loading, setLoading] = useState(true);
-  console.log(tips);
+  const [difficultyFilter, setDifficultyFilter] = useState("All");
+  const handleFilterChange = (e) => {
+    setDifficultyFilter(e.target.value);
+  };
+  const filteredTips =
+    difficultyFilter === "All"
+      ? tips
+      : tips.filter(
+          (tip) =>
+            tip.level?.toLowerCase() === difficultyFilter.toLocaleLowerCase()
+        );
+  // console.log(tips);
   useEffect(() => {
     const fetchPublicTips = async () => {
       try {
@@ -29,6 +40,14 @@ const BrowseTips = () => {
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-6">🌿 Public Gardening Tips</h1>
+      <div className="text-center">
+        <select onChange={handleFilterChange}>
+          <option value="All">All Difficulty Levels</option>
+          <option value="Easy">Easy</option>
+          <option value="Medium">Medium</option>
+          <option value="Hard">Hard</option>
+        </select>
+      </div>
 
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white rounded-lg overflow-hidden">
@@ -42,8 +61,8 @@ const BrowseTips = () => {
             </tr>
           </thead>
           <tbody className="divide-y divide-gray-200">
-            {tips.length > 0 ? (
-              tips.map((tip) => (
+            {filteredTips.length > 0 ? (
+              filteredTips.map((tip) => (
                 <tr key={tip._id} className="hover:bg-gray-50">
                   <td className="py-4 px-4">
                     {tip.imageUrl ? (
@@ -65,21 +84,13 @@ const BrowseTips = () => {
                     </span>
                   </td>
                   <td className="py-4 px-4">
-                    <span
-                      className={`px-2 py-1 rounded-full text-xs ${
-                        tip.difficultyLevel === "Easy"
-                          ? "bg-blue-100 text-blue-800"
-                          : tip.difficultyLevel === "Medium"
-                          ? "bg-yellow-100 text-yellow-800"
-                          : "bg-red-100 text-red-800"
-                      }`}
-                    >
-                      {tip.difficultyLevel}
+                    <span className="px-4 py-2 bg-green-300 rounded text-center">
+                      {tip.level}
                     </span>
                   </td>
                   <td className="py-4 px-4">
                     <Link
-                      to="/tip-details"
+                      to={`/tip-details/${tip._id}`}
                       className="inline-flex items-center px-3 py-1 bg-green-600 text-white rounded hover:bg-green-700 transition-colors"
                     >
                       <FaEye className="mr-2" />

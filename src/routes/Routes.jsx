@@ -11,6 +11,7 @@ import PrivateRoutes from "./PrivateRoutes";
 import MyTips from "../components/MyTips/MyTips";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import TipDetails from "../components/TipsDetails/TipDetails";
+import UpdateTips from "../components/UpdateTips/UpdateTips";
 export const router = createBrowserRouter([
   {
     path: "/",
@@ -39,7 +40,9 @@ export const router = createBrowserRouter([
         element: <BrowsTips />,
       },
       {
-        path: "tip-details",
+        path: "/tip-details/:_id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/tip-details/${params._id}`),
         element: <TipDetails />,
       },
       {
@@ -57,6 +60,21 @@ export const router = createBrowserRouter([
             <MyTips />
           </PrivateRoutes>
         ),
+      },
+      {
+        path: "/update-tips/:id",
+        element: (
+          <PrivateRoutes>
+            <UpdateTips />
+          </PrivateRoutes>
+        ),
+        loader: async ({ params }) => {
+          const res = await fetch(`http://localhost:3000/getTip/${params.id}`);
+          if (!res.ok) {
+            throw new Error("Tip not found");
+          }
+          return res.json();
+        },
       },
     ],
   },

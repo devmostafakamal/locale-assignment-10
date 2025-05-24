@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../../contexts/AuthContext";
 import { auth } from "../../firebase.init";
@@ -6,8 +6,15 @@ import { auth } from "../../firebase.init";
 
 function Navbar() {
   const { user } = useContext(AuthContext);
-  console.log(user);
   const [showProfile, setShowProfile] = useState(true);
+  // const [theme, setTheme] = useState("light");
+  // useEffect(() => {
+  //   document.documentElement.classList.toggle("dark", theme === "dark");
+  // }, [theme]);
+
+  // const toggleTheme = () => {
+  //   setTheme((prev) => (prev === "light" ? "dark" : "light"));
+  // };
 
   const commonLinks = (
     <>
